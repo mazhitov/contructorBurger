@@ -1,1 +1,13 @@
-<p>burger works!</p>
+<form>
+  <fieldset>
+    <legend>Burger</legend>
+    <div class="Burger">
+      <div class="BreadTop">
+        <div class="Seeds1"></div>
+        <div class="Seeds2"></div>
+      </div>
+      <div *ngFor="let ing of ingredients" [className]=""></div>
+      <div class="BreadBottom"></div>
+    </div>
+  </fieldset>
+</form>
