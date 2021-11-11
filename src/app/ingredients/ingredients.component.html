@@ -1,1 +1,11 @@
-<p>ingredients works!</p>
+<form>
+  <fieldset>
+    <legend>Ingredients</legend>
+    <div *ngFor="let ing of ingredients let i = index" class="row">
+      <span><button type="button" class="icons" (click)="onClickIcon(i)" [ngStyle]="{background: 'url(' + ing.imageUrl + ')'}"></button></span>
+      <span>{{ ing.name }}</span>
+      <span>x{{ ing.number }}</span>
+      <span><button type="button" (click)="onDelete(i)" class="deleteBtn"></button></span>
+    </div>
+  </fieldset>
+</form>

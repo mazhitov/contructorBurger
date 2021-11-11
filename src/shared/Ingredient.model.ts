@@ -5,4 +5,7 @@ export class Ingredient {
     public price: number,
     public imageUrl: string,
   ) {}
+  getTotal() {
+    return this.number * this.price;
+  }
 }

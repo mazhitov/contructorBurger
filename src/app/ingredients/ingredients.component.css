@@ -1,0 +1,22 @@
+.row {
+  display: flex;
+  align-items: center;
+}
+span {
+  width: 25%;
+  text-align: center;
+}
+.icons {
+  width: 64px;
+  height: 64px;
+  border: 1px solid green;
+  cursor: pointer;
+}
+.deleteBtn {
+  width: 24px;
+  height: 24px;
+  border: none;
+  cursor: pointer;
+  background: url("../../assets/burger/bin.png") center no-repeat;
+}
+
