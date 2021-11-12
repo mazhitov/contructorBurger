@@ -9,5 +9,10 @@
       <div *ngFor="let ing of ingredientArray" [ngClass]="ing"></div>
       <div class="BreadBottom"></div>
     </div>
+    <div class="price">
+      <app-price [ingredients]=ingredients></app-price>
+    </div>
   </fieldset>
 </form>
+
+
