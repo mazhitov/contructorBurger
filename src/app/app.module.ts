@@ -4,12 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BurgerComponent } from './burger/burger.component';
 import { IngredientsComponent } from './ingredients/ingredients.component';
+import { PriceComponent } from './burger/price/price.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BurgerComponent,
-    IngredientsComponent
+    IngredientsComponent,
+    PriceComponent
   ],
   imports: [
     BrowserModule
