@@ -8,6 +8,6 @@ import {Ingredient} from "../../shared/Ingredient.model";
 })
 export class BurgerComponent{
   @Input() ingredients!:Ingredient[];
-
+  @Input() ingredientArray:string[] = [];
 
 }

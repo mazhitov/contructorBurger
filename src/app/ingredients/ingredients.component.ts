@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Ingredient} from "../../shared/Ingredient.model";
 
 @Component({
@@ -8,10 +8,11 @@ import {Ingredient} from "../../shared/Ingredient.model";
 })
 export class IngredientsComponent {
   @Input() ingredients!:Ingredient[];
-
+  @Output() changeNumberOfIngredients = new EventEmitter<Ingredient[]>();
 
   onClickIcon(index: number) {
     this.ingredients[index].number++;
+    this.changeNumberOfIngredients.emit(this.ingredients);
   }
 
   onDelete(index: number) {
@@ -19,6 +20,7 @@ export class IngredientsComponent {
     if (this.ingredients[index].number <= 0) {
       this.ingredients[index].number = 0;
     }
+    this.changeNumberOfIngredients.emit(this.ingredients);
   }
 
 }
